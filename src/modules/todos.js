@@ -29,12 +29,12 @@ export default function todos(state = initialState, action) {
         case TOGGLE_TODO:
             return state.map(
                 todo => 
-                todo.id === action.id //id가 일치아느냐??
+                todo.id === action.id //id가 일치여부확인
                 ? { ...todo, done: !todo.done }
                 : todo //아닐때는 값을 그대로둠
             )
         case ADD_TODO : 
-            return state.concat(action.doto)
+            return state.concat(action.todo)
         default: 
          return state;
         
